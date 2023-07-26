@@ -12,10 +12,18 @@ export const getUser = (req, res) => {
 
   const search = (results) => {
     return results.filter((item) =>
-   item.first_name.toLowerCase().includes(q.toLowerCase()) 
+      `${item.first_name} ${item.last_name} ${item.origin}`.toLowerCase().includes(q.toLowerCase())
     );
   };
- 
+
   q ? res.send(search(data).slice(0, 10)) : res.send(data.slice(0, 10));
+
+};
+
+export const getUserId = (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  const findUser = data.find(user => id == user.id.$oid);
+  res.send(findUser);
 
 };

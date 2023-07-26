@@ -3,10 +3,10 @@ import { FaSearch } from "react-icons/fa";
 import useFetch from '../../hook/useFetch';
 import "./SearchBar.css";
 
-const SearchBar = ({ setResults, results,selectedItem, setSelectedItem }) => {
+const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
   const { data } = useFetch(`http://localhost:5000?q=${input}`);
-
+  
   useEffect(() => {
     setResults(data);
   }, [data]);
@@ -14,7 +14,7 @@ const SearchBar = ({ setResults, results,selectedItem, setSelectedItem }) => {
   const handleChange = (value) => {
     setInput(value);
   };
-  
+
   return (
     <div className="input-wrapper" >
       <FaSearch id="search-icon" />
