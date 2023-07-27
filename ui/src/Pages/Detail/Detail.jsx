@@ -6,7 +6,6 @@ import "./Detail.css";
 const Detail = () => {
     const { id } = useParams();
     const { data } = useFetch(`http://localhost:5000/user${id}`);
-    console.log(data);
     return (
         <div className='detailWarapper'>
             <img src={data.photo} width={100} height={100} />
