@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import useFetch from "../../hook/useFetch";
-import Error from "../../components/Error/Error";
-import Loading from "../../components/Loading/Loading";
-import "./Detail.css";
+import useFetch from "../../hooks/useFetch";
+import Error from "../../components/error/Error";
+import Loading from "../../components/loading/Loading";
+import "./detail.css";
 
 const Detail = () => {
     const { id } = useParams();

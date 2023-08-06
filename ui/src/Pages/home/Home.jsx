@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./home.css";
-import SearchResultsList from "../../components/SearchResultsList/SearchResultsList";
-import SearchBar from "../../components/Searchbar/SearchBar";
+import SearchResultsList from "../../components/searchResultsList/SearchResultsList";
+import SearchBar from "../../components/searchbar/SearchBar";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -19,7 +19,6 @@ function Home() {
         }
         //When enter-key is pressed, navigation function will be triggered.
         else if (e.key === "Enter" && selectedItem > -1) {
-
             navigate(`/user/${results[selectedItem].id.$oid}`);
         }
     };

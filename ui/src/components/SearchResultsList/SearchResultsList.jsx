@@ -1,4 +1,4 @@
-import "./SearchResultsList.css";
+import "./searchResultsList.css";
 import { useNavigate } from "react-router-dom";
 
 const SearchResultsList = ({ results, selectedItem }) => {

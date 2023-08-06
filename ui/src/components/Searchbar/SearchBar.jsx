@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
-import useFetch from "../../hook/useFetch";
-import "./SearchBar.css";
+import useFetch from "../../hooks/useFetch";
+import "./searchBar.css";
 
 const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
@@ -15,7 +15,6 @@ const SearchBar = ({ setResults }) => {
   const handleChange = (value) => {
     setInput(value);
   };
-
   return (
     <div className="input-wrapper" >
       <FaSearch id="search-icon" />
