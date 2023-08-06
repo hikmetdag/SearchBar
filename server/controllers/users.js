@@ -1,7 +1,3 @@
-
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-const Data = require("../clients.json");
 import fs from "fs";
 
 // Calling the fs.readFile() method for reading file "clients.json"
@@ -16,7 +12,7 @@ export const getUser = (req, res) => {
 
   const search = (results) => {
     return results.filter((item) =>
-      //It can searched by name,last name and origin.
+      //It can be searched by name,last name and origin.
       `${item.first_name} ${item.last_name} ${item.origin}`.toLowerCase().includes(q.toLowerCase())
     );
   };
